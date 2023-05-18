@@ -1,5 +1,4 @@
 package com.example.weeweel;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,26 +8,30 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class Weel extends AppCompatActivity {
     private TextView tvResult;
+
+    private TextView results;
     private ImageView rul;
     private Random random;
     private int old_deegre = 0;
     private int deegre = 0;
     private static final float FACTOR = 4.86f;
-    private String[] numbers = {"32 RED","15 BLACK","19 RED","4 BLACK",
-            "21 RED","2 BLACK","25 RED","17 BLACK", "34 RED",
-            "6 BLACK","27 RED","13 BLACK","36 RED","11 BLACK","30 RED",
-            "8 BLACK","23 RED","10 BLACK","5 RED","24 BLACK","16 RED","33 BLACK",
-            "1 RED","20 BLACK","14 RED","31 BLACK","9 RED","22 BLACK","18 RED",
-            "29 BLACK","7 RED","28 BLACK","12 RED","35 BLACK","3 RED","26 BLACK","0"};
+    private String[] numbers = {"32 GREEN","15 BLACK","19 GREEN","4 BLACK",
+            "21 GREEN","2 BLACK","25 GREEN","17 BLACK", "34 GREEN",
+            "6 BLACK","27 GREEN","13 BLACK","36 GREEN","11 BLACK","30 GREEN",
+            "8 BLACK","23 GREEN","10 BLACK","5 GREEN","24 BLACK","16 GREEN","33 BLACK",
+            "1 GREEN","20 BLACK","14 GREEN","31 BLACK","9 GREEN","22 BLACK","18 GREEN",
+            "29 BLACK","7 GREEN","28 BLACK","12 GREEN","35 BLACK","3 GREEN","26 BLACK","EMPTINESS"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.weel);
         init();
     }
 
@@ -81,7 +84,10 @@ public class MainActivity extends AppCompatActivity {
             factor_x += 2;
             factor_y += 2;
         }
-        if(deegre >= (FACTOR * 73) && deegre < 360 || deegre >= 0 && deegre < (FACTOR * 1)) text = numbers[numbers.length - 1];
+        if(deegre >= (FACTOR * 73) && deegre < 360 || deegre >= 0 && deegre < (FACTOR * 1)) {
+            text = numbers[numbers.length - 1];
+
+        }
 
         return text;
     }

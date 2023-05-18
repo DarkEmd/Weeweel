@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
-    tools:context=".MainActivity">
+    android:background="#ed1b24"
+    tools:context=".Weel">
 
     <TextView
         android:id="@+id/tvResult"
@@ -34,8 +34,9 @@
         android:id="@+id/rul"
         android:layout_width="380dp"
         android:layout_height="380dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/rouletteive" />
@@ -54,5 +55,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#D82828" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="116dp"
+        android:layout_height="60dp"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="348dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
