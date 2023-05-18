@@ -21,22 +21,16 @@ import java.util.Random;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.dices);
 
-            // array to store dice images
             final int dice[] = {R.drawable.dice1, R.drawable.dice2, R.drawable.dice3,
                     R.drawable.dice4, R.drawable.dice5, R.drawable.dice6};
 
-            // linking the roll button from its id..
             button = findViewById(R.id.btVar1);
 
-            // linking the result textview from its id..
             textView = findViewById(R.id.tvVar1);
 
-            // linking both the imageView of
-            // the dice images from its id..
             img1 = findViewById(R.id.ivVar1);
             img2 = findViewById(R.id.ivVar2);
 
-            // call the on click function
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
